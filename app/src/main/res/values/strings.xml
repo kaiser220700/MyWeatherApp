@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyWeatherApp</string>
+    <string name="cloud">cloud</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="dont_worry_about_the_weather_we_all_here">Dont worry about the weather we all here</string>
+    <string name="temp">TEMP</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="pop">POP</string>
+    <string name="status">Status</string>
+    <string name="humidity">Humidity</string>
+    <string name="uv">UV</string>
+    <string name="windy">Windy</string>
+    <string name="forecast">Forecast</string>
+    <string name="date">Date</string>
+    <string name="current_location">Current Location</string>
+    <string name="time">Time</string>
+    <string name="min_temp">Min Temp</string>
+    <string name="max_temp">Max Temp</string>
+    <string name="enter_cities">Enter cities</string>
+</resources>

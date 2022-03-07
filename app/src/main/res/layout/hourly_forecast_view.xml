@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="6dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/bg_splash_gradient">
+        <TextView
+            android:id="@+id/forecast_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="12sp"
+            android:textColor="#A098AE"
+            android:layout_gravity="center"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/forecast_icon"
+            android:layout_width="30.94dp"
+            android:layout_height="30dp"
+            android:layout_gravity = "center"
+            android:src="@drawable/status"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/forecast_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp"
+            android:textSize="14sp"
+            android:textColor="#363B64"
+            android:layout_gravity = "center"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
