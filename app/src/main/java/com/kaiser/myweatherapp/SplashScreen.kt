@@ -29,6 +29,7 @@ class SplashScreen : AppCompatActivity() {
 
         getLastLocation()
         supportActionBar?.hide()
+
     }
 
     @SuppressLint("MissingPermission")
@@ -68,11 +69,11 @@ class SplashScreen : AppCompatActivity() {
         mFusedLocation = LocationServices.getFusedLocationProviderClient(this)
         mFusedLocation.requestLocationUpdates(mLocationRequest, locationCallBack, Looper.myLooper()!!)
     }
-    private val locationCallBack = object:LocationCallback(){
-        override fun onLocationResult(p0: LocationResult) {
-            var lastLocation:Location=p0.lastLocation
+        private val locationCallBack = object:LocationCallback(){
+            override fun onLocationResult(p0: LocationResult) {
+                var lastLocation:Location=p0.lastLocation
+            }
         }
-    }
 
     private fun locationEnable(): Boolean {
         val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -97,14 +98,15 @@ class SplashScreen : AppCompatActivity() {
             android.Manifest.permission.ACCESS_FINE_LOCATION),myRequestCode)
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == myRequestCode) {
-            if (grantResults.isEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getLastLocation()
             }
         }
